@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang=ru>
+	<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content=width=device-width, initial-scale=1, shrink-to-fit=no>
+    <link rel=stylesheet href=css/style.css>
+    <title>Отправка формы на email</title>
+  </head>
+  <body>
+  
+    <div class="container">  
+  <form id="contact" action="php/telegram/telegram.php" method="post" enctype="multipart/form-data">
+    <h3>Colorlib Contact Form</h3>
+    <h4>Contact us for custom quote</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus name="user_name">
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required name="user_email">
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required name="user_phone">
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required name="user_site">
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your message here...." tabindex="5" required name="user_message"></textarea>
+    </fieldset>
+    <fieldset>
+    	<input type="file" name="user_image">
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+    <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
+  </form>
+</div>
+  
+  	<!--jQuery-->
+  	<script src=https://code.jquery.com/jquery-3.4.1.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+  </body>
+</html>

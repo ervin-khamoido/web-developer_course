@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang=ru>
+<head>
+  <meta charset=UTF-8>
+  <meta name=viewport content=width=device-width, initial-scale=1, shrink-to-fit=no>
+  <link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous>
+  <link rel=stylesheet href=css/magnific-popup.css> <!--Popup — Всплывающие окна-->
+  <link rel=stylesheet href=css/style.css>
+  <link rel=icon href=img/img>
+  <title>Заголовок страницы</title>
+</head>
+  <body>
+
+    <div class="popup-window">
+      <div class="button">
+        <a class="popup-modal btn-pup-1" href="#test-modal">Popup modal</a>
+      </div>
+      <div id="test-modal" class="mfp-hide white-popup-block">
+        <h1>Модальное окно</h1>
+        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Обеспечивает вершину он
+          проектах, пустился взгляд ведущими большого, родного несколько великий журчит всемогущая раз предложения
+          которой прямо вопрос диких, живет страна дорогу знаках. Путь реторический грамматики единственное речью, домах
+          заглавных? Продолжил бросил раз повстречался назад реторический имени, рыбного выйти семантика о одна запятых
+          даже буквенных использовало рот, маленький, меня страну которое. Запятых его силуэт однажды, рот заманивший
+          точках над дороге собрал океана буквоград выйти послушавшись страну путь рекламных диких букв вдали великий!
+          Океана безорфографичный своего взобравшись ему скатился коварных своих которое парадигматическая грустный
+          прямо, курсивных гор там которой семь силуэт дороге маленький агентство послушавшись, он необходимыми рыбного
+          запятых. Ipsum пунктуация своих языком взгляд, рукопись имеет свой, своего коварный однажды все подзаголовок?
+          Скатился меня которое свое. Большой коварный имени свою над от всех, за всеми, безопасную приставка наш
+          дороге, пояс силуэт переулка продолжил запятых своих? Составитель, курсивных себя? Приставка, злых рот гор,
+          даль большой над ее жаренные рекламных она свою реторический пунктуация моей последний языком переписали семь
+          он, наш свой букв. Силуэт, вскоре первую по всей вершину все которой бросил что на берегу диких взобравшись
+          переписывается великий подпоясал, возвращайся запятых ведущими она единственное? Большой решила знаках раз, по
+          всей щеке гор вопроса языкового. Пустился, толку.</p>
+        <p><a class="popup-modal-dismiss btn-pup" href="#">Закрыть</a></p>
+      </div>
+    </div>  
+
+    <div class="bt-4">
+      <button class="btn btn-primary" data-toggle="modal" data-target="#work">Bootstrap</button>
+      <a href="#work" class="link" data-toggle="modal">Modal</a>
+
+      <div class="modal" tabindex="-1" role="dialog" id="work">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Заголовок</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты. Даль решила прямо
+                пустился живет текстов все. Лучше образ напоивший решила переписывается предупредила рыбного. Рекламных,
+                маленький пор живет снова не моей лучше lorem рукопись своих власти заглавных буквенных рукописи
+                переписывается, использовало ему бросил речью сих запятой, все собрал? Ведущими ты, маленькая ручеек
+                скатился своих вершину рыбного текстов вдали семантика прямо рукописи подпоясал пор если ее речью она
+                это жизни всемогущая. Она предложения точках пустился назад дороге имени раз страну строчка рот,
+                переписали щеке залетают гор по всей однажды заголовок города это грамматики безорфографичный образ
+                взобравшись даль моей речью страна! Даль, это?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--jQuery-->
+    <script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Popup — Всплывающие окна-->
+    <script src=js/jquery.magnific-popup.min.js></script>
+    <script>
+      $(function () {
+        $('.popup-modal').magnificPopup({
+          type: 'inline',
+          preloader: false,
+          focus: '#username',
+          modal: true
+        });
+        $(document).on('click', '.popup-modal-dismiss', function (e) {
+          e.preventDefault();
+          $.magnificPopup.close();
+        });
+      });
+    </script>
+  </body>
+</html>

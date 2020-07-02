@@ -1,0 +1,24 @@
+body{
+	background-color: #18bc9a;
+}
+#portfolio, section h2 {
+		margin-top: 30px;
+}
+#portfolio, #portfolio hr.star-primary:after{
+	background-color: #fff;
+}
+#portfolio .portfolio-item .portfolio-link .caption{
+	background: rgba(24,188,156,.5);
+}
+hr.star-primary:after{
+	background-color: #18bc9a;
+}
+#contact, #contact hr.star-primary:after {
+	background-color: #fff;
+}
+.page-item a{
+	margin-right: 20px;	
+}
+a, a.active, a:active, a:focus, a:hover {
+	color: #fff;
+}

@@ -1,0 +1,1243 @@
+// COLORS
+//ALL
+$all-btn: #fcb203 //orange
+$all-icon: #49be15 //green
+$all-link: #73cc73 //green
+$all-text-btn: #ffffff //white
+$all-headline-light: #ffffff //white
+$all-headline-input-light: #565656 //gray
+$all-input-border-form: #dddddd //gray
+// SEC-1-9-11-footer
+$sec-1-9-11-footer_text-main: #292929 //black
+//SEC-2-3-4-5
+$sec-2-3-4-5_text: #1a1820 //black
+//SEC-6
+$sec-6_headline: #358015 //green
+$sec-6_main-text: #000000 //black
+$sec-6_under-headline-text: #1a1820 //black
+//SEC-7
+$sec-7_headline: #000000 //black
+$sec-7_main-text: #313131 //black
+//SEC-8
+$sec-8_text: #000000 //black
+//SEC-10
+$sec-10_text: #fcfcfc //white
+//MIXINS
+//ALL
+//headline-fw700
+=headline-general($fz, $color)
+  font-family: 'ProximaNova_bold', sans-serif
+  font-size: $fz
+  color: $color
+//btn
+=buttons-orange($width, $height, $fz)
+  width: $width
+  height: $height
+  box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04)
+  background-image: linear-gradient(to top, #f5ad00 0%, #ffb504 100%)
+  border: 1px solid #ffba15
+  border-radius: 8px
+  background-color: $all-btn
+  font-weight: 600
+  font-size: $fz
+  text-transform: uppercase
+  color: $all-text-btn
+  &:hover
+    background-image: linear-gradient(to top, #d89800 0%, #ffc843 100%)
+//ProximaNova_reg  
+=pn_reg($fz)
+  font-size: $fz
+  font-weight: 400
+  font-family: 'ProximaNova_reg', sans-serif
+//Table-udner-header-form
+=under-form-text-bg()
+  height: 38px
+  border-radius: 5px
+  background-color: rgb(255, 255, 255)
+  border: 1px solid rgb(200, 200, 200)
+=under-form-table($width, $height, $top, $left, $right)
+  position: relative
+  margin: 10px 0 100px 0
+  &::before
+    content: ''
+    +under-form-text-bg()
+    width: $width
+    height: $height
+    position: absolute
+    top: $top
+    left: $right
+    border-top: 3px solid rgb(0, 0, 0)
+    border-bottom: 3px solid rgba(0, 0, 0, .7)
+    border-radius: 5px
+  &::after
+    content: ''
+    +under-form-text-bg()
+    width: $width
+    height: $height
+    position: absolute
+    top: $top
+    right: $right
+    border-top: 3px solid rgb(0, 0, 0)
+    border-bottom: 3px solid rgba(0, 0, 0, .7)
+    border-radius: 5px
+//FLEXKIT
+=flex-kit($jc)
+  display: flex
+  flex-wrap: wrap
+  justify-content: $jc
+  align-items: center
+//WIDTH-HEIGHT
+=wh($w, $h)
+  width: $w
+  height: $h
+//FORM
+=form-kit()
+  +pn_reg(13px)
+  +flex-kit(center)
+  margin-top: 92px
+  +wh(355px, 410px)
+  background-color: #ffffff
+  border: 1px solid rgba(200, 200, 200, .7)
+  border-radius: 10px
+  .form-content
+    +wh(257px, 321px)
+    .form-headline
+      +pn_reg(18px)
+      margin-bottom: 34px
+      span
+        font-weight: 700
+    .your-name, .your-phone, .your-message, .your-email
+      +flex-kit(center)
+      +wh(80px, 18px)
+      position: absolute
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      background-color: #ffffff
+      text-align: center
+      color: $all-headline-input-light
+    .your-phone
+      width: 120px
+    input[type="text"], input[type="tel"], input[type="email"], textarea
+      +wh(100%, 54px)
+      margin-bottom: 25px
+      padding: 0 20px 0 20px
+      outline: none
+      resize: none
+      border: 1px solid $all-input-border-form
+      border-radius: 5px
+      +pn_reg(16px)
+    textarea
+      height: 91px
+      padding-top: 10px
+      font-size: 14px
+    input[type="submit"]
+      +buttons-orange(257px, 65px, 16px)
+    .sub-text-form
+        margin-top: 25px
+        text-align: center
+        color: $all-headline-input-light
+//MAIN-3
+=main-3_kit()
+  .main-3
+    .container
+      .section-3
+        .row
+          .container-cost
+            .m-3_header
+              margin: 70px auto 45px auto
+          .m-3_cont-btn
+            margin: 0px auto 50px auto
+        .row
+          .container-kit-of-cost
+            .kit-of-cost-box
+              margin-bottom: 25px
+              .kit-of-cost
+                +wh(400px, 660px)
+                &-1
+                  height: 570px
+                  .kit-of-cost-content
+                    height: 480px
+                .kit-of-cost-content
+                  img.kit-of-cost_img
+                    width: 300px
+//STYLES
+input:focus, a:focus, button:focus
+  outline: none
+//SECTION
+.main
+  padding-top: 15px
+  background: #ffffff url(../img/window-icon_header_sec-1/section-1-bg.jpg) center center no-repeat
+  background-size: cover
+  font-family: 'ProximaNova_reg', sans-serif
+  //HEADER
+  .header
+    +wh(auto, 70px)
+    .phone-link
+      +headline-general(20px, $sec-1-9-11-footer_text-main)
+      +wh(auto, 70px)
+      line-height: 70px
+    .container-header-btn
+      +flex-kit(flex-end)
+      .header-btn
+        +buttons-orange(225px, 50px, 12px)
+  //SECTION-1
+  .section-1
+    color: $sec-1-9-11-footer_text-main
+    .main-headline
+      margin: 90px 0 30px 0
+      +headline-general(40px, $sec-1-9-11-footer_text-main)
+      line-height: 58px
+      text-transform: uppercase
+    .sub-headline
+      margin-bottom: 53px
+      +pn_reg(24px)
+    .label-of-cost
+      display: inline-block
+      margin-bottom: 30px
+      padding: 23px 41px 11px 39px
+      background-color: $all-icon
+      +pn_reg(18px)
+      color: $all-headline-light
+      text-align: center
+      .three-hundred
+        font-size: 30px
+    .payment
+      margin-bottom: 100px
+      text-transform: uppercase
+      +headline-general(22px, $sec-1-9-11-footer_text-main)
+    //FORM
+    .form
+      +form-kit()
+    .under-text-form
+      +wh(355px, auto)
+      margin-top: 10px
+      text-align: center
+      font-size: 13px
+      font-weight: 600
+      +under-form-text-bg()
+      +under-form-table(5px, 28px, -20px, 15px, 15px)
+//SECTION-2
+.main-2
+  .container
+    .section-2
+      width: 100%
+      background-color: #ffffff
+      h1.main-headline
+        margin: 91px 0 113px 0
+        +headline-general(36px,$sec-2-3-4-5_text)
+        text-align: center
+      &-slider
+        margin-bottom: 120px
+        .advantage-prev-arrow
+          left: 0
+          background: url(../img/sec-2/png/arrow-left.png) center no-repeat 
+        .advantage-next-arrow
+          right: 0
+          background: url(../img/sec-2/png/arrow-right.png) center no-repeat
+          z-index: 9
+        .advantage-prev-arrow, .advantage-next-arrow
+          +wh(13px, 20px)
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          border: none
+          background-size: 100%
+          outline: none
+          z-index: 99
+        .slider-block
+          outline: none
+          &-img
+            picture
+              display: block
+              +wh(79px, 67px)
+              margin: 0 auto 44px auto
+              
+            h2.advantage-headline
+              margin-bottom: 20px
+              +headline-general(20px,$sec-2-3-4-5_text)
+              text-align: center
+            p.advantage-text
+              width: 250px
+              margin: 0 auto 10px
+              +pn_reg(16px)
+              text-align: center
+              .gicema
+                color: #4aa223
+//SECTION-3
+.main-3
+  background-color: #006a00
+  .container
+    .section-3
+      .row
+        .container-cost
+          padding: 0
+          .m-3_header
+            margin: 120px 0 90px 0
+            +flex-kit(space-between)
+            .container-headline
+              margin: auto
+              text-align: center
+              h1.headline
+                margin-bottom: 29px
+                +headline-general(36px, #ffffff)
+              .sub-headline
+                width: 380px
+                +pn_reg(18px)
+                color: #ffffff
+        .m-3_cont-btn
+          margin: 120px auto 0 auto
+          width: 360px
+          +flex-kit(center)
+        input
+          +buttons-orange(360px, 65px, 18px)
+      .row
+        .container-kit-of-cost
+          padding: 0
+          +flex-kit(center)
+          .kit-of-cost-box
+            margin-bottom: 117px
+            // width: 1140px
+            +flex-kit(space-between)
+            .kit-of-cost
+              position: relative
+              +flex-kit(center)
+              +wh(370px, 660px)
+              box-shadow: 0 14px 21px rgba(0, 0, 0, 0.17)
+              background-color: #ffffff
+              border-radius: 10px
+              .kit-of-cost-content
+                +wh(300px, 565px)
+                h1.headline
+                  margin-bottom: 25px
+                  +headline-general(19px, $sec-2-3-4-5_text)
+                  text-align: center
+                .kit-of-cost_img
+                  display: inline-block
+                  margin: 0 0 32px 0
+                h2.sub-headline
+                  margin-bottom: 22px
+                  text-align: center
+                  +headline-general(19px, $sec-2-3-4-5_text)
+                  span
+                    font-size: 30px
+                ul.cost-point
+                  padding: 0
+                  +pn_reg(18px)
+                  list-style: none
+                  line-height: 30px
+                  text-align: center
+                  li
+                    &::before
+                      content: ''
+                      display: inline-block
+                      +wh(11px,9px)
+                      margin-right: 9px
+                      background: url(../img/sec-3/check.svg) center no-repeat
+                      background-size: 100%
+                      vertical-align: middle
+                input
+                  +buttons-orange(209px, 65px, 18px)
+                  position: absolute
+                  bottom: 45px
+                  left: 50%
+                  transform: translateX(-50%)
+//SECTION-4
+.main-4
+  background: url(../img/sec-4/sec-4_bg.jpg) center no-repeat
+  color: $sec-2-3-4-5_text
+  .container
+    .section-4
+      position: relative
+      &-headline
+        h1
+          margin: 108px 0 66px 0
+          +headline-general(36px, $sec-2-3-4-5_text)
+          text-align: center
+      &-slider
+        margin-bottom: 60px
+        position: relative
+        background-color: #ffffff
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.11)
+        .feedback-prev-arrow, .feedback-next-arrow
+          width: 49px
+          height: 60px
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+        .feedback-prev-arrow
+          left: 0px
+          background: #ffffff url(../img/sec-4/feedback-arrow-prev.png) center no-repeat
+          border: none
+          z-index: 997
+        .feedback-next-arrow
+          right: 0px
+          background: #ffffff url(../img/sec-4/feedback-arrow-next.png) center no-repeat
+          border: none
+          z-index: 998
+        .section-4-slider-item
+          &:focus
+            outline: none
+          .row
+            .container-fotorama
+              .fotorama
+                margin: 20px 0 20px 0
+            .container-feedback
+              .work-done
+                margin-top: 30px
+                p
+                  margin-top: -10px
+                  +pn_reg(16px)
+              .feedback
+                .customer
+                  display: inline-block
+                  margin-bottom: 25px
+                  border-radius: 100%
+                .customer-name
+                  margin: 0 0 25px 10px
+                  display: inline-block
+                  vertical-align: middle
+                  line-height: 22px
+                  font-weight: 700
+                  font-size: 16px
+                  span
+                    +pn_reg(14px)
+                .feedback-text
+                  padding: 10px 10px
+                  border: 2px solid #49bf15
+                  &::before
+                    content: ''
+                    width: 20px
+                    height: 20px
+                    display: inline-block
+                    position: relative
+                    top: -30px
+                    left: 25px
+                    border: 2.3px solid #49bf15
+                    border-top-right-radius: 100%
+                    border-bottom: 3px solid #ffffff
+      .row
+        padding: 0
+        .application-form
+          margin-bottom: 100px
+          background-color: #ffffff
+          box-shadow: 0 5px 18px rgba(0, 0, 0, 0.11)
+          .application-form-content
+            h2
+              margin: 46px 0 30px 0
+              +headline-general(22px, $sec-2-3-4-5_text)
+              text-align: center
+            .form
+              .form-content
+                margin: 0
+                display: flex
+                justify-content: center
+                +pn_reg(14px)
+                label
+                  +flex-kit(center)
+                  +wh(80px, 18px)
+                  position: absolute
+                  left: 50%
+                  transform: translateX(-50%) translateY(-50%)
+                  background-color: #ffffff
+                  text-align: center
+                  color: $all-headline-input-light
+                .your-phone
+                  +wh(100px, 18px)
+                input[type="text"]
+                  display: inline-block
+                  +wh(300px, 54px)
+                  margin: 0 auto 25px auto
+                  padding: 0 20px 0 20px
+                  outline: none
+                  resize: none
+                  border: 1px solid $all-input-border-form
+                  border-radius: 5px
+                  +pn_reg(16px)
+                  text-align: center
+              input[type="submit"]
+                display: block
+                margin: 6px auto 50px auto
+                +buttons-orange(257px, 65px, 16px)
+    .hand
+      position: absolute
+      bottom: 0
+      left: -120px
+//SECTION-5
+.main-5
+  background: url(../img/sec-5/bg-hand.png) bottom 0px right -190px no-repeat
+  background-size: 600px
+  color: $sec-2-3-4-5_text
+  .container
+    .section-headline
+      margin-top: 110px
+      text-align: center
+      .headline
+        +headline-general(36px, $sec-2-3-4-5_text)
+      .sub-headline
+        margin: 30px 0 55px 0
+        +pn_reg(16px)
+    .row
+      .scheme-container
+        +wh(286px, 253px)
+        &:nth-child(-n+3)
+          margin-bottom: 50px
+        &:nth-child(n+4)
+          margin-bottom: 50px
+        .img-cont
+          margin-bottom: 25px
+          +wh(146px, 105px)
+          img
+            display: block
+            margin: auto
+        .img-headline
+          +headline-general(22px, $sec-2-3-4-5_text)
+        .description
+          line-height: 18px
+          +pn_reg(17px)
+//SECTION-6
+.main-6
+  background-color: #f5f5f5
+  color: $sec-6_main-text
+  .container
+    .all-headline
+      padding-top: 100px
+      margin-bottom: 100px
+      text-align: center
+      .headline
+        +headline-general(48px, $sec-6_headline)
+      .sub-headline
+        margin-top: 20px
+        +pn_reg(16px)
+        color: $sec-6_under-headline-text
+    .row
+      .point-container
+        margin-bottom: 100px
+        .point
+          display: block
+          margin: auto
+          +wh(285px, 50px)
+          position: relative
+          .point-img
+            display: inline-block
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+          .point-text
+            display: inline-block
+            width: 225px
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            +pn_reg(13px)
+            line-height: 16px
+            span
+              display: inline-block
+              line-height: 16px
+              +headline-general(16px, $sec-6_main-text)
+//SECTION-7
+.main-7
+  .container
+    position: relative
+    .fear-headline
+      margin: 120px 0px 70px 0px
+      .headline
+        +headline-general(36px, $sec-7_headline)
+        text-align: center
+    .row
+      .fear-problems, .fear-decision
+        margin-bottom: 130px
+        .fear-problems-box, .fear-decision-box
+          padding: 20px
+          +wh(460px, 380px)
+          .fear-problems-box-container-points, .fear-decision-box-container-points
+            .fear-problems-box-container-points-headline, .fear-decision-box-container-points-headline
+              margin-bottom: 30px
+            .fear-problems-box-container-points-kit, .fear-decision-box-container-points-kit
+              padding: 0
+              +pn_reg(16px)
+              color: $sec-7_main-text
+              .li-point
+                margin-bottom: 30px
+                list-style: none
+        .fear-problems-box
+          border: 4px solid #e8e8e8
+          .fear-problems-box-container-points
+            .fear-problems-box-container-points-headline
+              +headline-general(21px, #9e9e9e)
+            .fear-problems-box-container-points-kit
+              .li-point
+                &::before
+                  content: ''
+                  display: inline-block
+                  margin-right: 10px
+                  +wh(13px, 13px)
+                  background: url(../img/sec-7/danger.svg) center no-repeat
+                  background-size: cover
+                  vertical-align: baseline
+        .fear-decision-box
+          border: 4px solid #358015
+          .fear-decision-box-container-points
+            .fear-decision-box-container-points-headline
+              +headline-general(21px, $sec-7_main-text)
+            .fear-decision-box-container-points-kit
+              .li-point
+                &::before
+                  content: ''
+                  display: inline-block
+                  margin-right: 10px
+                  +wh(15px, 15px)
+                  background: url(../img/sec-7/checked.svg) center no-repeat
+                  background-size: 100%
+                  vertical-align: baseline
+    .fear-woman
+      position: absolute
+      bottom: 0
+      left: 48%
+      transform: translateX(-50%)
+      width: 300px
+//SECTION-8
+.main-8
+  background: url(../img/sec-8/material-bg.jpg) center no-repeat
+  background-size: cover
+  color: $sec-8_text
+  .container
+    .section-8
+      padding: 110px 0 55px 0
+      .main-headline, .sub-headline
+        +headline-general(36px, $sec-8_text)
+        text-align: center
+        margin-bottom: 50px
+      .sub-headline
+        +pn_reg(19px)
+        margin-bottom: 70px
+      &-slider
+        margin-bottom: 80px
+        .advantage-prev-arrow
+          left: 0
+          background: url(../img/sec-2/png/arrow-left.png) center no-repeat 
+        .advantage-next-arrow
+          right: 0
+          background: url(../img/sec-2/png/arrow-right.png) center no-repeat
+          z-index: 9
+        .advantage-prev-arrow, .advantage-next-arrow
+          +wh(13px, 20px)
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          border: none
+          background-size: 100%
+          outline: none
+          z-index: 99
+        .slider-block
+          outline: none
+          &-img
+            display: block
+            margin: auto
+            text-align: center
+            picture
+              display: block
+              +wh(220px, 177px)
+              margin: 0 auto 15px auto
+              .material-icon
+                display: block
+                margin: auto
+            .material-headline
+              margin-bottom: 20px
+              +headline-general(22px,$sec-8_text)
+              text-align: center
+            .material-text
+              +wh(214px, 50px)
+              margin: 0 auto 10px
+              +pn_reg(19px)
+              text-align: center
+              span
+                font-weight: 700
+            .material-certificate
+              margin-top: 20px
+              border-bottom: 1px dashed $all-link
+              text-align: center
+              color: $all-link
+              &:hover
+                text-decoration: none
+                color: darken($all-link, 20%)
+                border-bottom-color: darken($all-link, 20%)
+    .sub-text-section
+      margin-top: -10px
+      text-align: center
+      +pn_reg(20px)
+      span
+        font-weight: 700
+      .material-link
+        border-bottom: 1px solid $all-link
+        color: $all-link
+        &:hover
+          text-decoration: none
+          color: darken($all-link, 20%)
+          border-bottom-color: darken($all-link, 20%)
+//SETION-9
+.main-9
+  background: url(../img/sec-9/work-bg.jpg) center no-repeat
+  background-size: cover
+  color: $sec-1-9-11-footer_text-main
+  .container
+    .section-9
+      .row
+        padding-top: 120px
+        .container-work
+          .main-headline
+            margin-bottom: 20px
+            +headline-general(40px, $sec-1-9-11-footer_text-main)
+            line-height: 58px
+            text-transform: uppercase
+          .sub-headline
+            .sub-point
+              +pn_reg(24px)
+            .sub-1
+              margin-bottom: 15px
+        .container-for-form
+          +flex-kit(center)
+          .form
+            +form-kit()
+            margin: 0 0 120px 0
+            text-align: center
+//SECTION-10
+.main-10
+  background: #286b0a
+  color: $sec-10_text
+  text-align: center
+  .container
+    .section-10
+      padding: 100px 0 70px 0
+      .main-headline
+        +headline-general(36px, $sec-10_text)
+      .sub-headline
+        margin: 25px 0 60px 0
+        +pn_reg(19px)
+      .row
+        .service-point
+          margin-bottom: 60px
+          .service-headline
+            margin: 25px 0
+            +headline-general(20px, $sec-10_text)
+          .service-btn
+            +buttons-orange(146px, 52px, 16px)
+//SECTION-11
+.main-11
+  background: url(../img/sec-11/contact-bg.jpg) 65% center no-repeat
+  background-size: cover
+  font-size: 18px
+  color: $sec-1-9-11-footer_text-main
+  .container
+    .section-11
+      padding-top: 68px
+      .row
+        padding-bottom: 65px
+        // position: relative
+        .contacts-container
+          margin: 0px
+          .headline
+            +headline-general(36px, $sec-1-9-11-footer_text-main)
+            margin-bottom: 43px
+          .adress
+            margin-bottom: 20px
+            +pn_reg(18px)
+          .map
+            margin-bottom: 20px
+          .contact-box
+            margin-bottom: 20px
+            a
+              color: $sec-1-9-11-footer_text-main
+              text-decoration: underline
+          .phone-box
+            .phone
+              font-weight: 700
+              text-decoration: none
+        .container-for-form
+          // position: absolute
+          // right: 0
+          +form-kit()
+          margin: 0px auto
+          height: 610px
+          .form
+            .form-content
+              position: relative
+              height: 500px
+              .form-headline
+                text-align: center
+//FOOTER
+.main-12
+  margin: 20px 0 10px 0
+  background: #ffffff
+  color: $sec-1-9-11-footer_text-main
+  +pn_reg(17px)
+  .container
+    .row
+      .footer-item
+        margin: auto
+      .footer-item-2
+        text-align: center
+        a
+          color: $sec-1-9-11-footer_text-main
+        .tel
+          +headline-general(20px, $sec-1-9-11-footer_text-main)
+        .email-schedule
+          text-decoration: underline
+      .footer-item-3
+        text-align: right
+        a
+          +headline-general(15px, $sec-1-9-11-footer_text-main)
+
+
+//MODAL-WINDOWS
+//Получить косультацию
+.advice
+  display: none
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  +wh(100%, 100vh)
+  background-color: rgba(0, 0, 0, .7)
+  text-align: center
+  z-index: 999
+  &-dialog-box
+    position: relative
+    top: -28px
+    left: 50%
+    transform: translateX(-50%)
+    +form-kit()
+    +wh(355px, 507px)
+    +flex-kit(center)
+    background-color: #ffffff
+    .advice-content
+      +wh(257px, 425px)
+      .advice-close
+        +wh(20px, 20px)
+        position: absolute
+        top: -5px
+        right: 5px
+        padding: 0
+        border: none
+        background-color: transparent
+        text-align: center
+        font-size: 30px    
+//MAX-WIDTH-1200px(LG)
+@media (max-width: 1199px) and (min-width: 992px)
+  .main
+    background-position-x: -430px
+    .section-1
+      .sub-headline
+          margin-bottom: 43px
+      .container-for-form
+        +flex-kit(flex-end)
+        .form
+          .form-content
+            +flex-kit(center)
+            position: relative
+            .your-name
+              position: absolute
+              top: 75px
+        .under-text-form
+          margin-top: -15px
+  .main-3
+    .container
+      .section-3
+        .row
+          .container-cost
+            .m-3_header
+              margin-bottom: 50px
+          .m-3_cont-btn
+            margin: 0 auto 50px auto
+        .row
+          .container-kit-of-cost
+            width: 310px
+            .kit-of-cost-box
+              width: 310px
+              .kit-of-cost
+                +wh(310px, 660px)
+                .kit-of-cost-content
+                  img.kit-of-cost_img
+                    margin: 0 auto 22px auto
+                    display: block
+                    width: 250px
+  .main-4
+    .container
+      .hand
+        left: -140px
+  .main-7
+    .container
+      .fear-woman
+        width: 200px
+        left: 45%
+//MAX-WIDTH-992px(MD)
+@media (max-width: 991px) and (min-width: 768px)
+  .main
+    background-position-x: left 
+    .header
+      .header-phone-link
+        position: relative
+        +wh(157px, auto)
+        .phone-link
+          display: block
+          position: absolute
+          left: 0
+    .section-1
+      .main-headline
+        margin-bottom: 50px
+      .sub-headline
+        display: inline-block
+        position: relative
+        top: -30px
+        margin: 0px 193px 0px 0
+      .label-of-cost
+        margin-bottom: 0
+      .payment
+        margin: -25px 0 70px 0
+      .container-for-form
+        +flex-kit(center)
+        .form
+          margin-top: 0px
+  +main-3_kit()
+  .main-4
+    .container
+      .section-4
+        &-slider
+          box-shadow: 0 0px 18px rgba(0, 0, 0, 0.11)
+          &-item
+            padding: 0 50px
+        .feedback-prev-arrow
+          left: -20px
+        .feedback-next-arrow
+          right: -20px
+  .main-7
+    .container
+      .row
+        .fear-problems
+          height: 290px
+          margin-bottom: 20px
+          .fear-problems-box 
+            height: 290px
+        .fear-decision
+          height: 330px
+          margin-bottom: 10px
+          .fear-decision-box
+            margin-bottom: 10px
+            height: 340px
+      .fear-woman
+        left: 80%
+  .main-9
+    background: url(../img/sec-9/work-bg-2.jpg) center no-repeat
+    background-size: cover
+    .container
+      .section-9
+        .row
+          .container-work
+            margin-bottom: 30px
+//MAX-WIDTH-767px(SM)
+@media (max-width: 767px) and (min-width: 576px)
+  .main
+    background-position-x: left
+    .container
+      .header
+        position: relative
+        .phone-link
+          position: absolute
+          top: -10px
+          right: 17px
+        .header-btn
+          position: absolute
+          right: 17px
+          top: -35px
+          width: 223px
+          margin-top: 30px
+      .section-1
+        margin-top: 100px
+        position: relative
+        .main-headline
+          margin: 0 0 20px 0
+        .sub-headline
+          display: inline-block
+          margin-bottom: 20px
+          +pn_reg(20px)
+        .label-of-cost
+          position: absolute
+          right: 17px
+          bottom: -20px
+          padding: 16px 25px 10px 24px
+          +pn_reg(18px)
+        .payment
+          margin-bottom: 0
+        .container-for-form
+          margin-top: -2px
+  +main-3_kit()
+  .main-4
+    .container
+      .section-4
+        &-slider
+          box-shadow: 0 0px 18px rgba(0, 0, 0, 0.11)
+          &-item
+            padding: 0 50px
+            .row
+              .container-feedback
+                margin-top: 30px
+        .feedback-prev-arrow
+          left: -20px
+        .feedback-next-arrow
+          right: -20px
+      .hand
+        left: -160px
+  .main-7
+    .container
+      .fear-headline
+        margin: 50px 0 50px 0
+      .row
+        .fear-problems
+          margin-bottom: 20px
+          .fear-problems-box
+            margin: auto
+            height: 290px
+        .fear-decision
+          margin-bottom: 20px 
+          .fear-decision-box
+            margin: auto
+            height: 340px
+      .fear-woman
+        display: none
+  .main-9
+    background: url(../img/sec-9/work-bg-2.jpg) center no-repeat
+    background-size: cover
+    .container
+      .section-9
+        .row
+          .container-work
+            margin-bottom: 30px
+  .main-11
+    background: url(../img/sec-11/contact-bg-small.jpg) center no-repeat
+    background-size: cover
+    .container
+      .section-11
+        .row
+          .container-for-form
+            margin-top: 30px
+  .main-12
+    text-align: center
+    .container
+      .row
+        .footer-item
+          text-align: center
+        .footer-item-2
+          margin: 30px 0 20px 0
+        .footer-item-3
+         margin-bottom: 30px
+//MAX-WIDTH-576px
+@media (max-width: 575px)
+  .main
+    background-position-x: left
+    width: 100%
+    padding: 0
+    .container
+      padding: 0 
+      .header
+        +wh(100%, 60px)
+        position: relative
+        .row
+          margin: 0 !important
+        .cont-header-logo
+          display: block
+          position: absolute
+          top: 73px
+          text-align: center
+        .header-phone-link, .container-header-btn
+          +flex-kit(center)
+          position: absolute
+          background-color: #ffffff
+          +wh(100%, 100%)
+        .header-phone-link
+          left: 0
+          vertical-align: middle
+          .phone-link
+            font-size: 16px
+            margin-left: -10px
+        .container-header-btn
+          right: 0
+          vertical-align: middle
+          .header-btn
+            +buttons-orange(170px, 40px, 11px)
+            margin-left: -15px
+      .section-1
+        position: relative
+        .row
+          margin: 0 !important
+        .main-headline
+          margin: 110px 0 20px 0
+          text-align: center
+          line-height: 22px
+          +headline-general(22px, $sec-1-9-11-footer_text-main)
+          .word-auto
+            display: block
+        .sub-headline
+          margin-bottom: 30px
+          text-align: center
+          line-height: 20px
+          +pn_reg(18px)
+        .label-of-cost
+          width: 225px
+          position: absolute
+          left: 50%
+          transform: translateX(-50%)
+        .payment
+          margin: 142px auto 13px auto
+          text-align: center
+          +headline-general(19px, $sec-1-9-11-footer_text-main)
+        .container-for-form
+          +flex-kit(center)
+          .form
+            margin: auto
+            display: flex
+            justify-content: center
+            .form-content
+              +flex-kit(center)
+              position: relative
+              .your-name
+                position: absolute
+                top: 75px
+  .main-3
+    .container
+      .section-3
+        .row
+          .container-cost
+            .m-3_header
+              width: 265px
+              margin: 70px auto 45px auto
+              .container-headline
+                width: 320px
+                .sub-headline
+                  width: 260px
+                  +pn_reg(16px)
+          .m-3_cont-btn
+            display: block
+            margin: auto
+            width: 265px
+            margin: 0px auto 50px auto
+            input
+              display: block
+              margin: auto
+              +buttons-orange(265px, 65px, 15px)
+        .row
+          .container-kit-of-cost
+            .kit-of-cost-box
+              margin-bottom: 25px
+              .kit-of-cost
+                +wh(300px, 660px)
+                &-1
+                  height: 570px
+                  .kit-of-cost-content
+                    height: 480px
+                .kit-of-cost-content
+                  img.kit-of-cost_img
+                    display: block
+                    margin: 0 auto 20px auto
+                    width: 270px
+  .main-4
+    .container
+      .section-4
+        &-slider
+          padding: 0 10px
+        .feedback-prev-arrow, .feedback-next-arrow
+          width: 18px
+          height: 30px
+        .feedback-prev-arrow
+          left: -13px
+        .feedback-next-arrow
+          right: -13px
+        .row
+          .application-form
+            .application-form-content
+              .form
+                input[type="submit"]
+                  +buttons-orange(230px, 65px, 16px)
+      .hand
+        width: 180px
+        left: -60px
+  .main-5
+    background: #ffffff
+    .container
+      .row
+        .scheme-container
+          text-align: center
+          .img-cont
+            margin: auto
+  .main-7
+    .container
+      .fear-headline
+        margin: 50px 0 50px 0
+      .row
+        .fear-problems
+          padding: 0
+          margin: 0 auto 20px auto
+          +wh(300px, 400px)
+          .fear-problems-box
+            margin: auto
+            +wh(300px, 400px)
+        .fear-decision
+          padding: 0
+          margin: 0 auto 20px auto
+          .fear-decision-box
+            margin: auto
+            +wh(300px, 480px)
+      .fear-woman
+        display: none
+  .main-9
+    background: url(../img/sec-9/work-bg-3.jpg) center no-repeat
+    background-size: cover
+    .container
+      .section-9
+        .row
+          .container-work
+            margin-bottom: 30px
+  .main-10
+    .container
+      .section-10
+        .row
+          .service-point
+            .service-img
+              width: 280px
+  .main-11
+    background: url(../img/sec-11/contact-bg-small.jpg)
+    .container
+      .section-11
+        .row
+          .container-for-form
+            .form
+              .form-content
+                width: 100%
+                input, textarea
+                  width: 90%
+                  display: block
+                  margin-left: auto          
+                  margin-right: auto
+  .main-12
+    text-align: center
+    .container
+      .row
+        .footer-item
+          text-align: center
+        .footer-item-2
+          margin: 30px 0 20px 0
+        .footer-item-3
+         margin-bottom: 30px
+  //MODAL-WINDOWS
+  .advice
+    background-color: transparent
+    &-dialog-box
+      position: absolute
+      top: -85px
+      // transform: translateY(-100%)
+      left: 50%
+      transform: translateX(-50%)
+      +wh(300px, 98vh)
+      padding-bottom: 10px
+      .advice-content
+        +wh(250px, 440px)
