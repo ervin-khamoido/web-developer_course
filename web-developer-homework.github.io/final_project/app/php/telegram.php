@@ -5,13 +5,13 @@
 
 $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
-$email = $_POST['user_email'];
+$bluetooth = $_POST['availability_bluetooth'];
 $token = "1393445137:AAF3NKExgrRhkKkuAy3OoZ8Obm02rBctTkk";
 $chat_id = "779379836ad";
 $arr = array(
   'Имя пользователя: ' => $name,
   'Телефон: ' => $phone,
-  'Email' => $email
+  'Наличие bluetooth: ' => $bluetooth
 );
 
 foreach($arr as $key => $value) {
@@ -21,7 +21,7 @@ foreach($arr as $key => $value) {
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
 if ($sendToTelegram) {
-  header('Location: thank-you.html');
+  header('Location: ../thanks.html');
 } else {
   echo "Error";
 }
