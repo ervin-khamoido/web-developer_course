@@ -182,6 +182,9 @@ $light-bg: #f8f8f0
     text-align: center
     h1
       margin-bottom: 30px
+    a
+      +font(25px, 'Helvetica_medium', $light)
+      font-weight: 700
     .get-back
       margin-top: 50px
       padding-top: 18px
@@ -568,7 +571,8 @@ $light-bg: #f8f8f0
         color: #fff
 .video-box
   display: none
-  weight: 100%
+  width: 1065px
+  // height: 600px
   position: fixed
   top: 50%
   left: 50%
@@ -763,7 +767,7 @@ $light-bg: #f8f8f0
   .section-10
     +sec-10()
 
-@media (max-width: 767px) and (min-width: 320px)
+@media (max-width: 767px) and (min-width: 576px)
   .section-1
     height: 650px
     overflow-y: hidden 
@@ -859,3 +863,234 @@ $light-bg: #f8f8f0
       display: none
   .section-14
     height: auto
+
+@media (max-width: 575px) and (min-width: 320px)
+  .section-1
+    height: 650px
+    overflow-y: hidden 
+    .header
+      height: 250px
+      .logo
+        // margin-top: 10px
+        margin: 0px 0 30px 0
+        +flex-kit(wrap, center, center)
+        p 
+          margin-top: 10px
+          padding: 0 30px
+          font-size: 16px
+      .contact
+        +flex-kit(no-wrap, center, center)
+        .phone
+          font-size: 22px
+        .request-call
+          margin: 0 0 0 20px
+    .sell-prop
+      margin-top: 20px
+      +flex-kit(wrap, center, center)
+      h1
+        font-size: 20px
+      h2
+        margin-top: 10px
+        font-size: 17px
+      button
+        +btn(220px, 45px, 15px)
+      img
+        width: 250px
+    .dinosaur-item
+      display: none
+      width: 150px
+      margin-top: -360px
+      margin-bottom: 0
+  .section-2
+    height: 1250px
+    padding: 25px 0 25px 0
+    .about-VR
+      height: 480px
+      h1
+        font-size: 25px
+      .list-box
+        +flex-kit(wrap, center, center)
+        margin-top: 450px
+        width: auto
+        .list
+          width: 250px
+          +flex-kit(wrap, flex-start, flex-start)
+          margin: 0 0 0 50%
+          transform: translateX(-50%)
+          ul
+            li
+              font-size: 15px
+          .price
+            font-size: 17px
+            span
+              font-size: 20px
+        .list-1
+          .price
+            margin-top: -120px
+        .list-2
+          position: absolute
+          left: 0
+          margin-top: 210px
+      .equipment_order
+        bottom: -700px
+        +btn(300px, 60px, 15px)
+        margin-left: 50%
+        transform: translate(-50%)
+    .VRset
+      +flex-kit(wrap, center, baseline)
+      margin-top: -50%
+      text-align: center
+      position: relative
+      .VR-set
+        width: 300px
+      .arrow
+        position: absolute
+        width: 60px
+        top: 47%
+        left: 64%
+      p
+        width: 200px
+        position: absolute
+        display: inline
+        top: 55%
+        left: 50%
+        transform: translateX(-50%)
+  .section-3  
+    .col-12
+      height: 470px
+      margin: 0
+      .sec-3-content
+        +flex-kit(wrap, center, center)
+        width: 100%
+        margin-left: 50%
+        transform: translateX(-50%)
+        .ironman, .car-shark
+          width: 330px
+        .car-shark
+          position: absolute
+          top: 0
+        .fun-block
+          width: 100%
+          position: relative
+          .fun-block-text
+            width: 100%
+            h3
+              width: 90%
+              font-size: 19px
+            p
+              width: 250px
+              font-size: 16px 
+        .travel
+          position: absolute
+          top: 250px       
+        .rubin
+          display: none
+  .section-4
+    +sec-4()
+    height: 900px
+    .sec-content
+      width: 100%
+      .title 
+        font-size: 25px
+      .subtitle
+        width: 100%
+        height: auto
+        &::after
+          display: none
+      .proposal
+        display: block
+        +flex-kit(wrap, center, flex-start)
+        &-first
+          width: 230px
+          margin: 0
+        &-second
+          width: 230px
+          top: 100px
+          left: 50% 
+          transform: translateX(-50%)
+    .column 
+      margin-top: 90px
+      .form
+        width: 300px
+  .section-5
+    .snowboard, .laptop
+      width: 300px
+    .snowboard
+      margin-bottom: 30px
+    .laptop
+      margin-top: -550px
+      padding-bottom: 20px
+    .kind-of-sports, .games
+      width: 310px
+      +flex-kit(wrap, center, center)
+      .kind-of-sports-text, .games-text
+        width: 90%
+        h3
+          font-size: 18px
+        p
+          font-size: 15px
+    .games
+      margin-top: 200px
+  .section-6
+    h1
+      font-size: 2rem
+    .item
+      .point-box
+        width: 325px
+        margin-left: 50%
+        transform: translateX(-50%)
+  .section-7
+    +sec-7()
+    .headline
+      font-size: 30px
+    .phones-box
+      .phone
+        display: block
+        margin: 0 0 20px 0
+    .coub
+      display: none
+    .vrbox-container
+      img
+        width: 300px
+        margin-bottom: 20px
+      figcaption
+        font-size: 20px
+  .section-9
+    .container 
+      .headline
+        font-size: 30px
+      .games-disc
+        div
+          margin-bottom: 30px
+  .section-10
+    .container
+      .callback
+        +wh(95%, 510px)
+        margin: 0 0 20px 50%
+        transform: translateX(-50%)
+        +flex-kit(wrap, center, center)
+        .user
+          width: 100%
+          +flex-kit(wrap, space-around, center)
+          &-info
+            margin: 10px 0 20px 0
+            text-align: center
+    .cloud
+      display: none
+  .section-14
+    height: auto
+
+  // .form-box
+  //   width: 310px
+  //   margin-left: 50%
+  //   transform: translateX(-50%)
+  //   .form
+  //     width: 310px
+  // .video-box
+  //   width: 310px
+  //   // // margin-top: -100px
+  //   // margin-left: 50%
+  //   // transform: translateX(-50%)
+  //   iframe
+  //     width: 310px
+  //     height: 176px
