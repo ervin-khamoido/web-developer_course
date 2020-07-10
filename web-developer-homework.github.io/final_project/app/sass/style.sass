@@ -265,7 +265,7 @@ $light-bg: #f8f8f0
     margin-bottom: 30px
   .little-diamond
     position: absolute
-    top: 30%
+    top: 0
     left: 0
   .planet
     top: 0
@@ -276,8 +276,10 @@ $light-bg: #f8f8f0
     +text-block()
   .rubin
     position: absolute
-    margin-top: 5%
-    right: -5%
+    // margin-top: 5%
+    // margin: 0
+    right: 0
+    // right: -5%
   .car-shark
     position: absolute
     bottom: 0
@@ -378,25 +380,27 @@ $light-bg: #f8f8f0
   padding: 70px 0px
   position: relative
   background-color: #fcfcf6
-  overflow-x: hidden
+  overflow: hidden
   +font(22px, 'Helvetica_medium', $dark)
-  .headline
-    margin-bottom: 80px
-    +font(35px, 'Helvetica-black', $dark)
-  .phone
-    display: inline-block
-    margin-right: 40px
-    text-align: center
-    img
-      margin-bottom: 15px
-  .vrbox-container
-    height: 100%
-    +flex-kit(wrap, center, flex-end)
-  .coub
-    position: absolute
-    top: 0
-    right: 0
-    transform: translateX(50%)
+  .container
+    position: relative
+    .headline
+      margin-bottom: 80px
+      +font(35px, 'Helvetica-black', $dark)
+    .phone
+      display: inline-block
+      margin-right: 40px
+      text-align: center
+      img
+        margin-bottom: 15px
+    .vrbox-container
+      height: 100%
+      +flex-kit(wrap, center, flex-end)
+    .coub
+      position: absolute
+      top: 1600px
+      right: -460px
+      z-index: 999
 
 // SECTION-8
 .section-8
@@ -476,8 +480,9 @@ $light-bg: #f8f8f0
           +font(17px, 'Helvetica_light', $dark)
     .cloud
       position: absolute
-      top: 5%
-      right: -5%
+      top: 2000px
+      right: -10%
+      bottom: 0
 
 // SECTION-11
 .section-11
