@@ -193,8 +193,6 @@ $light-bg: #f8f8f0
       &:hover
         text-decoration: none
         
-      
-
 // SECTION-2
 .section-2
   padding: 105px 0 70px 0
@@ -265,6 +263,10 @@ $light-bg: #f8f8f0
   overflow-x: hidden
   .ironman
     margin-bottom: 30px
+  .little-diamond
+    position: absolute
+    top: 30%
+    left: 0
   .planet
     top: 0
   .table
@@ -338,10 +340,18 @@ $light-bg: #f8f8f0
     +flex-kit(wrap, space-around, center)
     .games-text
       margin-bottom: 40px
+    .little-diamond
+      position: absolute
+      top: 5%
+      left: 17%
     .kind-of-sports, .games
       display: inline-block
       position: relative
       +text-block()
+    .green-stone
+      position: absolute
+      right: 11%
+      bottom: 0
 
 // SECTION-6
 .section-6
@@ -466,7 +476,7 @@ $light-bg: #f8f8f0
           +font(17px, 'Helvetica_light', $dark)
     .cloud
       position: absolute
-      top: 0
+      top: 5%
       right: -5%
 
 // SECTION-11
@@ -571,8 +581,8 @@ $light-bg: #f8f8f0
         color: #fff
 .video-box
   display: none
-  width: 1065px
-  // height: 600px
+  width: 97%
+  height: 70%
   position: fixed
   top: 50%
   left: 50%
@@ -595,8 +605,8 @@ $light-bg: #f8f8f0
     cursor: pointer
     z-index: 99
   iframe
-    width: 1054px
-    height: 600px
+    width: 100%
+    height: 100%
 
 .active
   display: block
@@ -687,7 +697,9 @@ $light-bg: #f8f8f0
       .list-box
         margin-top: 550px
       .equipment_order
-        bottom: -550px
+        bottom: -570px
+        margin-left: 50%
+        transform: translateX(-50%)
     .VRset
       margin-top: -270px
       position: relative
@@ -836,12 +848,18 @@ $light-bg: #f8f8f0
         margin-top: -100px
   .section-3
     +sec-3()
+    .little-diamond
+      display: none
+    .rubin
+      display: none
   .section-4
     +sec-4()
   .section-5
     +sec-5()
     .kind-of-sports, .games
       transform: translateX(-30%)
+    .little-diamond, .green-stone
+      display: none
   .section-7
     +sec-7()
     .phones-box
@@ -983,6 +1001,8 @@ $light-bg: #f8f8f0
         .travel
           position: absolute
           top: 250px       
+        .little-diamond
+          display: none
         .rubin
           display: none
   .section-4
@@ -1087,10 +1107,7 @@ $light-bg: #f8f8f0
   //   .form
   //     width: 310px
   // .video-box
-  //   width: 310px
-  //   // // margin-top: -100px
-  //   // margin-left: 50%
-  //   // transform: translateX(-50%)
+  //   width: 98%
+  //   height: 50%
   //   iframe
-  //     width: 310px
-  //     height: 176px
+  //     +wh(100%, 100%)
