@@ -78,7 +78,8 @@ $light-bg: #f8f8f0
         background-color: #000
         +font(18px, 'Helvetica_medium', $light)
         color: #fff
-      input[type="submit"]
+      a.orderBtn
+        +flex-kit(wrap, center, center)
         +btn(270px, 60px, 18px)
       .callback-text
         margin-top: 15px
@@ -398,8 +399,10 @@ $light-bg: #f8f8f0
       +flex-kit(wrap, center, flex-end)
     .coub
       position: absolute
-      top: 1600px
-      right: -460px
+      top: 50%
+      // right: -460px
+      right: -40%
+      transform: translateY(-50%)
       z-index: 999
 
 // SECTION-8
@@ -442,7 +445,7 @@ $light-bg: #f8f8f0
           display: inline-block
           +wh(100%, 160px)
           margin-bottom: 30px
-    #btn-order
+    #order-sec-9
       margin-top: 40px
       +btn(270px, 62px, 18px)
 
@@ -480,7 +483,7 @@ $light-bg: #f8f8f0
           +font(17px, 'Helvetica_light', $dark)
     .cloud
       position: absolute
-      top: 2000px
+      top: 50px
       right: -10%
       bottom: 0
 

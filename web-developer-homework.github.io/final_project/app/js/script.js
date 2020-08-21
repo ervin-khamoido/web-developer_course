@@ -5,8 +5,6 @@ $(function () {
     overlay = $('.overlay'),
     playVideoBtn = $('.btn-play');
 
-
-
   orderCallBtn.on('click', function (event) {
     $('.form-box-call').toggleClass('active');
     overlay.show();

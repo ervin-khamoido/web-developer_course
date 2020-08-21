@@ -164,12 +164,13 @@
 
         <div class="column col-xl-5 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
           <div class="sec-content">
-            <form action="php/telegram.php" method="post" class="form">
+            <form action="#" method="post" class="form">
               <div class="form-content">
                 <h1 class="headline">Введите ваши данные и нажмите заказать</h1>
                 <input type="text" name="user_name" placeholder="Введите имя" required>
                 <input type="tel" name="user_phone" placeholder="Введите телефон" id="phone" required>
-                <input type="submit" value="Заказать vr box 2" id="order-sec-4" onclick="ym(65524036,'reachGoal','order-sec-4')">
+                <!-- <input type="submit" value="Заказать vr box 2" id="order-sec-4" onclick="ym(65524036,'reachGoal','order-sec-4')"> -->
+                <a href="./thanks.html" id="order-sec-4" class="orderBtn order-callback">Заказать vr box 2</a>
                 <p class="callback-text">Перезвоним в течение 10 минут</p>
               </div>
             </form>
@@ -495,12 +496,13 @@
 
           <div class="column col-xl-5 offset-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="sec-content">
-              <form action="php/telegram.php" method="post" class="form">
+              <form action="#" method="post" class="form">
                 <div class="form-content">
                   <h1 class="headline">Введите ваши данные и нажмите заказать</h1>
                   <input type="text" name="user_name" placeholder="Введите имя" required>
                   <input type="tel" name="user_phone" placeholder="Введите телефон" id="phone-1" required>
-                  <input type="submit" value="Заказать vr box 2" id="order-sec-12" onclick="ym(65524036,'reachGoal','order-sec-12')">
+                  <!-- <input type="submit" value="Заказать vr box 2" id="order-sec-12" onclick="ym(65524036,'reachGoal','order-sec-12')"> -->
+                  <a href="./thanks.html" id="order-sec-12" class="orderBtn order-callback">Заказать vr box 2</a>
                   <p class="callback-text">Перезвоним в течение 10 минут</p>
                 </div>
               </form>
@@ -545,7 +547,7 @@
   <!-- MODAL -->
   <div class="overlay"></div>
   <div class="form-box form-box-equipment" id="equipment-pop-up">
-    <form action="php/telegram.php" method="post" class="form">
+    <form action="#" method="post" class="form">
       <div class="form-content">
         <h1 class="headline">Введите ваши данные и нажмите заказать</h1>
         <div class="close-btn close-btn-equipment">&times;</div>
@@ -555,33 +557,35 @@
           <option value='true'>С Bluetooth пультом</option>
           <option value='false'>Без Bluetooth пульта</option>
         </select>
-        <input type="submit" value="Заказать vr box 2">
+        <!-- <input type="submit" value="Заказать vr box 2"> -->
+        <a href="./thanks.html" class="orderBtn order-callback">Заказать vr box 2</a>
         <p class="callback-text">Перезвоним в течение 10 минут</p>
       </div>
     </form>
   </div>
 
   <div class="form-box form-box-call">
-    <form action="php/telegram.php" method="post" class="form">
+    <form action="#" method="post" class="form">
       <div class="form-content">
         <h1 class="headline">Введите ваши данные и нажмите заказать звонок</h1>
         <div class="close-btn close-btn-call">&times;</div>
         <input type="text" name="user_name" placeholder="Введите имя" required>
         <input type="tel" name="user_phone" placeholder="Введите телефон" id="phone-3" required>
-        <input type="submit" class="order-callback" value="Заказать звонок">
+        <!-- <input type="submit" class="order-callback" value="Заказать звонок"> -->
+        <a href="./thanks.html" class="orderBtn order-callback">Заказать звонок</a>
         <p class="callback-text">Перезвоним в течение 10 минут</p>
       </div>
     </form>
   </div>
 
   <div class="form-box form-box-manager">
-    <form action="php/telegram.php" method="post" class="form">
+    <form action="#" method="post" class="form">
       <div class="form-content">
         <h1 class="headline">Оставьте заявку мы свяжемся с вами и ответим на все вопросы</h1>
         <div class="close-btn close-btn-manager">&times;</div>
         <input type="text" name="user_name" placeholder="Введите имя" required>
         <input type="tel" name="user_phone" placeholder="Введите телефон" id="phone-4" required>
-        <input type="submit" class="order-request" value="Оставить заявку">
+        <a href="./thanks.html" class="orderBtn order-request">Оставить заявку</a>
         <p class="callback-text">Перезвоним в течение 10 минут</p>
       </div>
     </form>
@@ -610,10 +614,10 @@
   <!--Bootstrap JS-->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-  <script src="js/rellax.min.js"></script>
+  <!-- <script src="js/rellax.min.js"></script>
   <script>
     var rellax = new Rellax('.rellax');
-  </script>
+  </script> -->
 
   <script src=js/script.js></script> 
   </body> 
